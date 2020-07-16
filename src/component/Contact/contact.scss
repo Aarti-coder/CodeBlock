@@ -1,0 +1,16 @@
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+
+  a {
+    margin-bottom: 1.4rem;
+    display: flex;
+    align-items: center;
+  }
+  .link-text {
+    color: $text-db;
+    font-size: 18px;
+    margin-left: 20px;
+  }
+}

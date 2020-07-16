@@ -1,0 +1,35 @@
+// ######################################## //
+// ## HEADER.SCSS ## //
+// ######################################## //
+
+.nav-main {
+  height: 80px;
+  box-shadow: 12px 3px 5px 3px rgba(0, 0, 0, 0.1);
+  @include mobile {
+    height: auto;
+  }
+  .nav-item {
+    .nav-text {
+      color: $theme-primary;
+      font-size: 21px;
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    .about-text {
+      color: $gray-4;
+      position: relative;
+      &::after {
+        content: '';
+        height: 6px;
+        width: 115px;
+        background-color: $theme-primary;
+        position: absolute;
+        top: -28px;
+        left: 18px;
+      }
+    }
+    .collapse:not(.show) {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+// ######################################## //
+// ## ABOUT.SCSS ## //
+// ######################################## //
+
+.about-custom-row {
+  .about-div {
+    &::after {
+      display: none;
+    }
+  }
+  .about-heading {
+    font-size: 38px;
+    text-transform: none;
+    text-align: right;
+    background-color: transparent;
+    width: 100%;
+    @include mobile {
+      text-align: center;
+    }
+  }
+  .about-para {
+    font-size: 18px;
+    text-transform: lowercase;
+    color: $theme-primary;
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.2;
+    max-width: 50%;
+    margin-left: auto;
+    @include mobile {
+      max-width: 100%;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+// ######################################## //
+// ## MIXINS.SCSS ## //
+// ######################################## //
+
+// ----------------------------------
+// Placeholder Mixin
+// ----------------------------------
+@mixin input-placeholder {
+  &.placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+// ----------------------------------
+// Media Query Mixin
+// ----------------------------------
+$iphone5-width: 350px;
+$iphone6-width: 375px;
+$tablet-width: 768px;
+$tablet-p-width: 991px;
+$desktop-width: 1024px;
+$desktop-width-md: 1280px;
+$desktop-width-lg: 1500px;
+
+// Mobile Mixin
+@mixin mobile {
+  @media (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+// Mobile Mixin (Landscape Orientation)
+@mixin mobile-o-l {
+  @media (max-width: #{$tablet-width - 1px}) and (orientation:landscape) {
+    @content;
+  }
+}
+
+// Mobile-Tablet(P) Mixin
+@mixin mobile-tablet-p {
+  @media (max-width: #{$tablet-p-width}) {
+    @content;
+  }
+}
+
+// ----------------------------------
+// Brandon Grotesque Font Family
+// ----------------------------------
+@mixin text-primary() {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Merriweather', serif;
+}
+
+// ----------------------------------
+// Heading Color
+// ----------------------------------
+@mixin headings-all() {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    color: $theme-primary-text;
+  }
+}

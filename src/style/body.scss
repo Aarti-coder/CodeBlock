@@ -1,0 +1,44 @@
+// ######################################## //
+// ## BODY.SCSS ## //
+// ######################################## //
+
+.layout-wrapper {
+  overflow-x: hidden;
+  .main-section {
+    padding: 35px 0;
+    border-bottom: 1px solid $gray-8;
+  }
+
+  .about-section {
+    margin: 3rem 1rem 0;
+  }
+  .main-footer {
+    box-shadow: none;
+  }
+  .nav-link-footer {
+    color: $theme-blue-two !important;
+    &::after {
+      display: none;
+    }
+  }
+  .blue-bg {
+    color: $theme-blue-two !important;
+    position: relative;
+    &::after {
+      content: '';
+      height: 10px;
+      width: 150px;
+      background-color: $theme-primary;
+      position: absolute;
+      top: -28px;
+      left: 5px;
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+}
+
+a:hover {
+  text-decoration: none !important;
+}
